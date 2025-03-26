@@ -1,10 +1,15 @@
-
 import pandas as pd
 import plotly.graph_objects as go
 from pathlib import Path
 
 # Load the Excel data
-df = pd.read_excel("RCDs in pandemic age (a).xlsx")
+try:
+    df = pd.read_excel("RCDs in pandemic age (a).xlsx")
+except FileNotFoundError:
+    print("Error: The file 'RCDs in pandemic age (a).xlsx' was not found.")
+    exit(1)
+
+# Drop rows with missing values in the required columns
 df = df.dropna(subset=["Resilient Community Dimension", "Threshold Transition (Positive Change)", "Sub-dimensions & Indicators"])
 
 labels = ["Resilient Community"]
