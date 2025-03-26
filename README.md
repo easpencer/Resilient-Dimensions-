@@ -1,16 +1,19 @@
-# The 2025 Seville Agenda for Collective Resilience
+# Seville Agenda Chart
 
-This project hosts the full interactive version of the white paper:
-**"The 2025 Seville Agenda for Collective Resilience in a Post-SDG Era"**
+This GitHub repo shows the Seville Agenda for Collective Resilience using an interactive sunburst chart.
 
-Hosted on GitHub Pages.
+## Files
 
-Includes:
-- Full HTML version of the white paper
-- Interactive Plotly sunburst chart
-- Clean, accessible layout
-- Footer with source links
+- `index.html`: Website with the embedded chart
+- `RCDs in pandemic age (a).xlsx`: Data used to generate the chart
+- `generate_sunburst.py`: Python script to generate the chart
+- `README.md`: This file
 
-## Credits
-- Science Summit NYC: [sciencesummitnyc.org](https://sciencesummitnyc.org)
-- Resilient Collective: [resilient.ucsd.edu](https://resilient.ucsd.edu)
+## To regenerate:
+
+```bash
+pip install pandas plotly openpyxl
+python generate_sunburst.py
+```
+
+Open `index.html` in your browser or host via GitHub Pages.
